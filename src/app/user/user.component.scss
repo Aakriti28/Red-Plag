@@ -1,0 +1,191 @@
+button {
+  background-color: rgb(22, 187, 187);
+  color: #ffffff;
+  width: fit-content;
+  align-items : center;
+  align-content: center;
+  // right:0;
+  text-decoration: none;
+  border:none;
+  padding-left: 50px;
+  padding-right: 50px;
+  &:hover { cursor: pointer;
+    background-color: #111;
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+button[disabled=disabled] , button:disabled{
+  background-color: rgb(143, 213, 226);
+  color: #000000;
+  border:none;
+}
+.op {
+  padding: 10pt;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.lft {
+  align-items : left;
+  align-content: left;
+  text-align: start;
+}
+
+
+.btn2 {
+  background-color: rgba(22, 99, 187, 0.555);
+  color: #ffffff;
+  width: 160px;
+  height: 35px;
+  align-items : left;
+  align-content: left;
+  padding-left: 0;
+  padding-right: 0;
+  // right:0;
+  text-decoration: none;
+  border:none;
+  // padding-left: 100px;
+  // padding-right: 100px;
+  &:hover { cursor: pointer;
+    background-color: #111;
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+.instructions {
+  color:rgb(67, 115, 170);
+
+  font-size: 0.8pc;
+  padding-top: 0.8em;
+}
+
+h5 {
+  color: #888888;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ctr{
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+
+
+
+
+/* fileslistComponent's private CSS styles */
+.fileslist {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  padding: 10px 10px;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  // width:960px;
+}
+.fileslist li {
+  cursor: pointer;
+
+  // left: 0;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 124, 112, 0.274);
+  margin: 3px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  align-items : center;
+  align-content: center;
+  text-align: center;
+  border-radius: 4px;
+}
+.fileslist li:hover {
+  color: white;
+  background-color: rgba(228, 111, 111, 0.774);
+  left: .1em;
+}
+.fileslist li.selected {
+  background-color: rgba(255, 75, 75, 0.815);
+  color: white;
+}
+.fileslist li.selected:hover {
+  background-color: #ad2d2dbd;
+  color: white;
+}
+
+
+
+
+
+/*BoilerPlate List*/
+
+.boillist {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  padding: 10px 10px;
+  align-items: center;
+}
+.boillist li {
+  cursor: pointer;
+
+  // left: 0;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 124, 112, 0.274);
+  margin: 3px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  // width:960px;
+  align-items : center;
+  align-content: center;
+  text-align: center;
+  border-radius: 4px;
+}
+.boillist li:hover {
+  color: white;
+  background-color: rgba(228, 111, 111, 0.774);
+  left: .1em;
+}
+.boillist li.selected {
+  background-color:rgba(255, 75, 75, 0.815);
+  color: white;
+}
+.boillist li.selected:hover {
+  background-color: #ad2d2dbd;
+  color: white;
+}
+/*.fileslist .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color:#405061;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+*/
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

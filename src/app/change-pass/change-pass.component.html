@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+
+  <div class="card px-lg-5">
+  <h1 class="card-header info-color white-text text-center py-4 px-lg-5">
+    <strong>Change Password</strong>
+  </h1>
+<div class="card-body px-lg-5 pt-20">
+
+  <form class="white" style="color: #757575;">
+
+   <div class="md-form px-lg-5 pt-20">
+      <label for="pwd" class = "px-lg-5">Password</label>
+      <input class="validate form-control mb-4 px-lg-5" type="password" name="Password" [(ngModel)]="user.old_password" required minlength="8" id="pwd1" placeholder="Enter Old Password">
+
+    </div>
+
+    <div class="md-form px-lg-5 pt-20">
+      <label for="pwd" class = "px-lg-5">Password</label>
+      <input class="validate form-control mb-4 px-lg-5" type="password" name="Password" [(ngModel)]="user.new_password" required minlength="8" id="pwd2" placeholder="Enter New Password">
+
+    </div>
+
+    <div class="px-lg-5">
+      <button (click)="changePassword()" class= "btn btn-info btn-block my-4">Change Password</button>
+    </div>
+  </form>
+
+  <div class="px-lg-5">
+    <a [routerLink]="['/user']"><button class= "btn btn-info btn-block my-4">Go Back</button></a>  
+  </div>
+</div>
+</div>

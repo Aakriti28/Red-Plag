@@ -1,0 +1,119 @@
+<app-header></app-header>
+<div class="card px-lg-5">
+  <h1 class="card-header info-color white-text text-center py-0 px-lg-5">
+    <h4>Instructions</h4></h1>
+    <div>
+      <ol class="instructions">
+        <li>Select a file to upload by clicking on the <b>Browse</b> button, and then click the <b>Upload</b> button.</li>
+        <li>The <b><i>User Files</i></b> section contains all of the user's previous and newly uploaded files. Select any of these files to <b>Download</b> or <b>Delete</b> them by clicking on the buttons given below.</li>
+        <li>The <b><i>Boilerplate Code Files</i></b> section contains the files which can be used as Boilerplate code as a reference when comparing multiple files.</li>
+        <li>Select any file of type <b><i>.zip/.tar.gz/.tar</i></b> from the <i>User Files</i> section and click on <b>Compare and Download Results</b> to generate and download a pairwise comparison result of the files within.</li>
+        <li>To remove any Boilerplate code from the files to be compared, Upload a separate <b><i>.cpp/.py/.java</i></b> file containing it and select it when it appears in the <i>Boilerplate Code Files</i> section, then click the <b>Compare and Download Results</b> button. This will remove the Boilerplate code when comparing the files.</li>
+      </ol>
+    </div>
+</div>
+
+<div class="card px-lg-5">
+  <h1 class="card-header info-color white-text text-center py-0 px-lg-5">
+    <h4>Upload Files</h4>
+  </h1>
+<div class="card-body px-lg-5 pt-20">
+
+  <form class="white" style="color: #757575;">
+
+    <div class="md-form px-lg-5 pt-20">
+      <label for="fileup" class = "px-lg-5">
+        File:
+        <input type="file" id = "fileup" class = "form-control mb-4 px-lg-5" (change)="onFile($event)"/>
+      </label>
+    </div>
+
+    <div class="px-lg-5 op">
+      <button (click)="uploadFile()" class= "btn btn-link btn-block my-4">Upload</button>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
+<div class="card-body px-lg-5 pt-20">
+
+<h5> User Files: </h5>
+
+<ul class="fileslist">
+  <li *ngFor="let file of list_of_files"
+    [class.selected]="file === selectedFile"
+    (click)="onSelect(file)">
+    {{file}}
+  </li>
+</ul>
+<div class="card-body px-lg-3 pt-10" *ngIf="selectedFile">
+	<h6>Click on selected file to deselect</h6>
+</div>
+
+<h5> Boilerplate Code Files: </h5>
+
+<ul class="boillist">
+<!-- <ul> -->
+  <li *ngFor="let file of list_of_boils"
+    [class.selected]="file === selectedBoil"
+    (click)="onBoilSelect(file)">
+    {{file}}
+  </li>
+</ul>
+ <div class="card-body px-lg-3 pt-10" *ngIf="selectedBoil">
+	<h6>Click on selected file to deselect</h6>
+</div>
+
+
+
+
+
+<form class="white" style="color: #757575;">
+
+   <!--<div class="md-form px-lg-5 pt-20">
+      <label for="pwd" class = "px-lg-5">File Name</label>
+      <input class="form-control mb-4 px-lg-5" type="text" name="fname" [(ngModel)]="files.filename" required id="com_fname" placeholder="Enter Filename To Compare">
+
+    </div>-->
+
+    <div class="resIm"  *ngIf="isResLoading">
+    <h4> Hang On ...We are working on your files ...!</h4>
+    <br/>
+     </div>
+
+<h5> Choose the operation to perform: </h5>
+
+    <div class="px-lg-5 op">
+      <button (click)="compareFiles()" [disabled]="!selectedFile || isSingleFile" class= "btn btn-info btn-block my-4">Compare and Download Results</button>
+    </div>
+
+    <div class="resIm"  *ngIf="isImageLoading">
+    <h5> Results:</h5>
+    <img [src]="imageToShow" alt="Results">
+     </div>
+
+    <!-- <h5> You can Choose any File To Download:</h5> -->
+    <div class="px-lg-5 op">
+      <button (click)="downloadFiles()" [disabled]="!selectedFile" class= "btn btn-info btn-block my-4 ccc">Download File</button>
+      <button (click)="deleteFiles()" [disabled]="!selectedFile" class= "btn btn-info btn-block my-4 ccc">Delete File</button>
+    </div>
+
+    <!-- <h5> Delete Selected File From Server:</h5> -->
+    <!-- <div class="px-lg-5 op">
+
+    </div> -->
+
+
+
+  </form>
+
+
+  <div class="px-lg-5 op">
+    <!-- <button (click)="window.location.href = 'https://localhost:4200/change_pass';"></button> -->
+  <a [routerLink]="['/change_pass']"><button class="btn btn-link btn-block my-4">Change Password</button></a>
+</div>
+

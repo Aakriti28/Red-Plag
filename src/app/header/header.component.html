@@ -1,0 +1,23 @@
+<nav class='header-bar jumbotron'>
+  <div class="text-center">
+    <a class='name' [routerLink]="['']"><p class="h1">RED PLAG: A Source Code Plagiarism Detector</p></a>
+  </div>
+
+  <ng-container *ngIf="Disp(page) == true; then first else second"></ng-container>
+  <ng-template #first>
+    <ul>
+      <li><a [routerLink]="['/login']">Login</a></li>
+      <li><a  [routerLink]="['/register']">Register</a></li>
+    </ul>
+  </ng-template>
+  <ng-template #second>
+    <ul>
+      <li><a (click)="Logout()">Logout</a></li>
+    </ul>
+  </ng-template>
+
+
+
+
+</nav>
+

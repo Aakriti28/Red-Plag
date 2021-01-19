@@ -1,0 +1,55 @@
+<!--<form class="col s12 white">
+  <div class="row">
+
+    <div class="input-field col s6">
+      <input class="validate" type="text" name="Email" [(ngModel)]="user.email">
+      <label data-error="Invalid email!">Email</label>
+    </div>
+
+    <div class="input-field col s6">
+      <input class="validate" type="password" name="Password" [(ngModel)]="user.password" required minlength="8">
+      <label >Password</label>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="input-field col s6">
+      <button (click)="registerUser()">Register</button>
+    </div>
+  </div>
+</form>-->
+<app-header></app-header>
+
+<div class="card px-lg-5">
+  <h1 class="card-header info-color white-text text-center py-4 px-lg-5">
+    <strong>Register</strong>
+  </h1>
+<div class="card-body px-lg-5 pt-20">
+
+  <form class="white" style="color: #757575;">
+
+    <div class="md-form px-lg-5">
+      <label data-error="Invalid email!" for="email" class = "px-lg-5">Email</label>
+      <input class="validate form-control mb-4 px-lg-5" type="text" name="Email" [(ngModel)]="user.email" id="email" placeholder="your email address">
+
+      <!--<small id="emailHelp" class="form-text text-muted px-lg-5">We'll never share your email with anyone else.</small>-->
+    </div>
+
+    <div class="md-form px-lg-5 pt-20">
+      <label for="pwd" class = "px-lg-5">Password</label>
+      <input class="validate form-control mb-4 px-lg-5" type="password" name="Password" [(ngModel)]="user.password" required minlength="8" id="pwd" placeholder="your password">
+
+    </div>
+
+    <div class="px-lg-5">
+      <button (click)="registerUser()" class= "btn btn-info btn-block my-4">Register</button>
+    </div>
+  </form>
+</div>
+</div>
+
+
+
+
+

@@ -1,0 +1,11 @@
+djangorestframework_jwt==1.11.0
+Django
+djangorestframework==3.12.1
+django-cors-headers==3.5.0
+pygccxml
+pygments
+pandas
+numpy
+matplotlib
+castxml
+winnowing
