@@ -1,6 +1,7 @@
 # RED PLAG - A SOURCE CODE PLAGIARISM CHECKER
+Course project for CS251 Software Systems Lab
 
-## Introduction and FLow
+## Introduction and Flow
 
 This projects aims at making a software for detecting plagiarism between source code files. Here implemented is a website which will allow users to interact with the tool. Any user who opens the website land on the `Home Page` where they are given two options - `Login` for existing user and `Registration` for new user. After doing either, the user is taken to their `Dashboard` where there are instrcutions on running the checker. They can select a `.tar/.tar.gz/.zip` file to upload for running through the plagiarism checker through the file selector available. There is also option to select boilerplate code to be excluded across all comparisons. Each user has a separate folder created at the backend where all their uploaded files are displayed. They can choose any uploaded file and then click at the button to run the plagiarism checker on it and generate results. The results generated will be a `.csv` file with n x n table of similarity between every 2 pair of files and an image with the graphical representation of the results in the form of a colormap. The user has the option to download the results or run the checker again. There is also option to delete any of the existing uploaded files and a `Logout` button to allow the user to logout and redirect to the `Home Page`. 
 
